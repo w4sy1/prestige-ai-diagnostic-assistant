@@ -11,3 +11,12 @@ Przy przyszłej integracji klucz tylko ze zmiennych środowiskowych/.env, nigdy 
 provider musi ujawniać wysyłanie danych i wymagać świadomego wyboru użytkownika.
 MVP ma cztery reguły i ograniczoną normalizację. Snapshoty bez tych metryk dają brak
 pokrycia, nie pozytywny werdykt. Nie wykonuje poleceń z raportów ani zaleceń administracyjnych.
+
+## Rozszerzenia 0.2.0
+
+Analiza rozpoznaje metryki Windows/ADB/sieci, ostrzeżenia stanu dysku, temperatury,
+jitter oraz brakujące moduły. Przenosi i deduplikuje alerty z Security Check/Malware Triage,
+oznaczając je jako wskazania źródłowe, a nie niezależne potwierdzenie.
+Progi są orientacyjne: porównaj temperaturę z limitem producenta. UNKNOWN nie oznacza awarii.
+Całość nadal działa w LOCAL MODE; raport nie opuszcza urządzenia. Zewnętrzny provider
+pozostaje opcjonalnym przyszłym rozszerzeniem i nie jest wymagany do tego trybu.

@@ -1,5 +1,5 @@
 # Prestige AI Diagnostic Assistant
-PRESTIGE TECH — by Dominik Wasilak — v0.1.0
+PRESTIGE TECH — by Dominik Wasilak — v0.2.0
 
 Lokalna normalizacja raportów, reguły i scoring bez wysyłania danych oraz bez działań administracyjnych.
 
