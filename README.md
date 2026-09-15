@@ -1,10 +1,10 @@
 # Prestige AI Diagnostic Assistant
-PRESTIGE TECH — by Dominik Wasilak — v0.2.0
+PRESTIGE TECH — by Dominik Wasilak — v0.3.1
 
-Lokalna normalizacja raportów, reguły i scoring bez wysyłania danych oraz bez działań administracyjnych.
+Domyślnie lokalna normalizacja, reguły i scoring. Opcjonalny provider OpenAI wysyła wybrane metryki. Program nie wykonuje działań administracyjnych.
 
 ## Instalacja i uruchomienie
-Python 3.11+. Skopiuj katalog projektu. Bez instalowania pakietów pip.
+Python 3.11+. Skopiuj katalog projektu. Podstawowy CLI używa biblioteki standardowej. PDF wymaga requirements-gui.txt; podpisy, jeśli dostępne, wymagają requirements-signing.txt.
 ```text
 python app.py --help
 python app.py --support
@@ -20,7 +20,7 @@ jeżeli dane polecenie zwraca takie rozstrzygnięcie. `--dry-run` pokazuje plan 
 
 ## Bezpieczeństwo i ograniczenia
 Narzędzie przeznaczone do celów edukacyjnych, diagnostycznych oraz do pracy z systemami i sieciami, których właścicielem jest użytkownik lub na których testowanie posiada zgodę.
-Dane pozostają lokalne. Polecenia sieciowe wymagają świadomego wywołania;
+Dane pozostają lokalne w trybie local. Wybranie OpenAI oznacza wysłanie metryk; GUI pyta przed wysłaniem. Polecenia sieciowe wymagają świadomego wywołania;
 zapytania DNS i połączenia do wskazanych hostów ujawniają im adres klienta.
 Brak uprawnień lub backendu jest błędem, nie pozytywnym wynikiem audytu.
 Zakres MVP i ograniczenia platformowe opisano w `docs/USAGE.md`.
@@ -31,3 +31,13 @@ Dominik Wasilak, Prestige Tech, prestigetech@gmail.com. Licencja MIT: `LICENSE`.
 ## Wesprzyj autora
 Opcja wsparcia autora zostanie udostępniona w przyszłości.
 Linki w `config/author.json`.
+
+## GUI i EXE 0.3.1
+
+Uruchom `python gui.py` albo samodzielny EXE. W EXE interpreter, PDF i potrzebne
+biblioteki Python są dołączone. Zewnętrzne backendy systemowe pozostają wymagane.
+Budowa: [docs/BUILD.md](docs/BUILD.md). Obsługa: [docs/GUI.md](docs/GUI.md).
+Ograniczenia bufora i testów: [docs/DESKTOP-STATUS.md](docs/DESKTOP-STATUS.md).
+Własny kod ma licencję MIT. Licencje zależności: THIRD_PARTY_NOTICES.txt.
+
+Konfiguracja klucza i zakres wysyłki: [docs/EXTERNAL_AI.md](docs/EXTERNAL_AI.md).
